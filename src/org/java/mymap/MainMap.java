@@ -10,22 +10,25 @@ public class MainMap {
 		
 		String str = "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam - repudiandae est, alias in ullam excepturi ipsam modi odio Lorem ipsum dolor asperiores voluptatum, # quam distinctio ! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam repudiandae Totam repudiandae est ; accusantium voluptatum, quam distinctio aut magnam quod veniam esse nesciunt debitis.";
 
-//		System.out.println(Arrays.asList(str.split(" ")));
+		String[] strArray = str.split(" "); 
+		System.out.println(Arrays.asList(strArray));
+		System.out.println(strArray.length);
 		
-		Map<Character, Integer> occCounter = new HashMap<>();
+		Map<String, Integer> occCounter = new HashMap<>();
 		
-		for (Character c : str.toLowerCase().toCharArray()) {
+		
+		for (String s : strArray) {
 
-			if (c.equals(' ') || !Character.isLetter(c)) continue;
+//			if (s.equals(' ') || !Character.isLetter(c)) continue;
 			
 			
 			
-			if (occCounter.containsKey(c)) {
+			if (occCounter.containsKey(s)) {
 				
-				occCounter.put(c, occCounter.get(c) + 1);
+				occCounter.put(s, occCounter.get(s) + 1);
 			} else {
 				
-				occCounter.put(c, 1);
+				occCounter.put(s, 1);
 			}
 		}
 		
