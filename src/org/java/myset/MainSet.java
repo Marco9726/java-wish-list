@@ -16,7 +16,7 @@ public class MainSet {
 		
 		while ( mySet.size() < 5) {
 			
-			int randomNumber = r.nextInt(10 + 1) + 2;
+			int randomNumber = r.nextInt(2, 13);
 			
 			mySet.add(randomNumber);
 			
