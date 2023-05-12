@@ -31,7 +31,7 @@ public class MainMap {
 			
 			for (Character c : lorem.toLowerCase().toCharArray()) {
 
-//				se il carattere è una lettera..args.	
+//				se il carattere è una lettera...	
 				if (Character.isLetter(c)) {
 //					...lo inserisco nell'arrayList di caratteri
 					charArr.add(c);
@@ -51,20 +51,19 @@ public class MainMap {
 		    	}
 		    }
 		    
-//		    inserisco la stringa in minuscolo e senza caratteri speciali nella lista dichiarata prima del ciclo
+//		    inserisco la stringa in minuscolo e senza caratteri speciali nella lista creata prima del for
 		    myList.add( builder.toString());   
 			
 		}
 		
 		System.out.println(myList);
-		
 //		inizializzo una mappa che conterrà le occorenze
 		Map<String, Integer> occCounter = new HashMap<>();	
 		
 //		ciclo le stringhe della nuova lista generata
 		for (String s : myList) {
 			
-			if (s.length() > 0 ){
+			if (!s.isEmpty() ){
 				
 				if (occCounter.containsKey(s)) {
 					
