@@ -16,7 +16,9 @@ public class MainMap {
 		
 		for (Character c : str.toLowerCase().toCharArray()) {
 
-			if (c.equals(' ')) continue;
+			if (c.equals(' ') || !Character.isLetter(c)) continue;
+			
+			
 			
 			if (occCounter.containsKey(c)) {
 				
